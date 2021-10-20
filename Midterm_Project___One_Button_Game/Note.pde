@@ -3,12 +3,12 @@ class Note
  
   PVector position, hitboxTopRight;
   int noteSize = 100;
-  float triggerDistance = (noteSize * 1.07);
+  float triggerDistance = (noteSize * 1.25);
   
-  boolean hitDetection = true;
+  boolean hitDetection = false;
   boolean alive = true;
   float spawnMarkTime = 0;
-  int liveTimer = 5000;
+  int liveTimer = 1500;
   
   int colourChoice;
   int laneChoice;
@@ -16,7 +16,7 @@ class Note
   float hitboxX = 1.75;
   float hitboxY = 1.15;
   
-  int speed = 10;
+  int speed = 20;
   
   Note(float x, float y, int tempLaneChoice)//, prevPosX, prevPosY) //https://processing.org/tutorials/objects
   {
@@ -49,13 +49,13 @@ class Note
     
     if(hitDetection)
     {
-    if(mousePos.dist(position) < triggerDistance) //generate 4 pvectors around each ellipse in a rectange and measure distance that way or compare values (equate them with < or >)
-    {
-      if(pressedMouse)
+      if(mousePos.dist(position) < triggerDistance)
       {
-        alive = false;
+        if(pressedMouse)
+        {
+          alive = false;
+        }
       }
-    }
     }
     
     if(millis() > spawnMarkTime + liveTimer)

@@ -3,7 +3,7 @@ GameMaster gameMaster;
 
 ArrayList<Note> notes = new ArrayList<Note>();
 float noteSpawnMarkTime = 0;
-int spawnInterval = 250;
+int spawnInterval = 150;
 
 boolean pressedMouse;
 float clickMarkTime = 0;
@@ -21,6 +21,8 @@ void setup()
 
 void draw()
 {
+  background(220);
+
   gameMaster.run();
   
   mousePos = new PVector(mouseX, mouseY);
@@ -30,7 +32,6 @@ void draw()
     pressedMouse = false;
     clickMarkTime = millis();
   }
-  background(220);
   
   if(millis() > noteSpawnMarkTime + spawnInterval)
   {
@@ -42,17 +43,9 @@ void draw()
   {
     notes.get(i).run();
     
-    if(notes.get(i).hitDetection)
-    {
-      if(notes.size() > 1)
-      {
-      notes.get(i + 1).hitDetection = false;
-      }
-    }
-    else if(!notes.get(i).hitDetection)
-    {
-      notes.get(i).hitDetection = true;
-    }
+    notes.get(0).hitDetection = true; //Only the first note in the array has hit detection turned on, this way hit detection cannot overlap
+    notes.get(int(i > 0)).hitDetection = false;
+   
   }
   
   for(int i=notes.size()-1; i >=0; i--)
