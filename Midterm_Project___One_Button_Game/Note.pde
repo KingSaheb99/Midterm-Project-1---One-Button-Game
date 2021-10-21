@@ -3,12 +3,12 @@ class Note
  
   PVector position, hitboxTopRight;
   int noteSize = 100;
-  float triggerDistance = (noteSize * 1.25);
+  float triggerDistance = noteSize * 1.10;
   
   boolean hitDetection = false;
   boolean alive = true;
   float spawnMarkTime = 0;
-  int liveTimer = 1500;
+  int liveTimer = 2500;
   
   int colourChoice;
   int laneChoice;
@@ -16,7 +16,7 @@ class Note
   float hitboxX = 1.75;
   float hitboxY = 1.15;
   
-  int speed = 20;
+  int speed = 11;
   
   Note(float x, float y, int tempLaneChoice)//, prevPosX, prevPosY) //https://processing.org/tutorials/objects
   {
@@ -40,11 +40,11 @@ class Note
     }
     else if(laneChoice == 2) //Middle lane
     {
-      position.y = 0 + (height/8) * 2;
+      position.y = (height/8) * 2;
     }
     else if(laneChoice == 3) //Bottom lane
     {
-      position.y = 0 + (height/8) * 3;
+      position.y = (height/8) * 3;
     }
     
     if(hitDetection)
@@ -66,12 +66,20 @@ class Note
   
   void draw()
   {
-    stroke(0, 255, 0);
-    fill(255, 255, 255);
-    rectMode(CENTER);
-    rect(position.x, position.y, noteSize * hitboxX, noteSize * hitboxY);
+    if(debug)
+    {
+      strokeWeight(1);
+      stroke(0, 255, 0);
+      fill(255, 255, 255);
+      rectMode(CENTER);
+      rect(position.x, position.y, noteSize * hitboxX, noteSize * hitboxY);
+      
+      ellipse(hitboxTopRight.x, hitboxTopRight.y, 20, 20);
+
+    }
     
     stroke(0, 0, 0);
+    strokeWeight(2);
     ellipseMode(CENTER);
     
     if(colourChoice == 1) //Yellow
@@ -93,7 +101,6 @@ class Note
     
     ellipse(position.x, position.y, noteSize, noteSize);
     
-    ellipse(hitboxTopRight.x, hitboxTopRight.y, 20, 20);
   }
   
   void run()
