@@ -3,7 +3,7 @@ class Note
  
   PVector position, hitboxTopRight;
   int noteSize = 100;
-  float triggerDistance = noteSize * 1.10;
+  float triggerDistance = noteSize * 50; //Change later
   
   boolean hitDetection = false;
   boolean alive = true;

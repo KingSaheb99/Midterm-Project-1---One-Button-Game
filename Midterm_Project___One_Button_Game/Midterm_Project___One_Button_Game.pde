@@ -17,6 +17,7 @@ boolean debug = false;
 
 void setup()
 {
+  
  size(1920, 1080, P2D);
  
  track1 = new SoundFile(this, "Yoroshiku Oppai Bakunyuu Yankee.wav");
@@ -39,7 +40,7 @@ void draw()
   
   mousePos = new PVector(mouseX, mouseY);
   
-  if(pressedMouse && millis() > clickMarkTime + clickTimeout) //Turns off mouse clciked after certain amount of time
+  if(pressedMouse && millis() > clickMarkTime + clickTimeout) //(1a) Turns off mouse clciked after certain amount of time 
   {
     pressedMouse = false;
     clickMarkTime = millis();
