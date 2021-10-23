@@ -8,6 +8,7 @@ int spawnInterval = 0;
 boolean pressedMouse;
 float clickMarkTime = 0;
 int clickTimeout = 150;
+float heldMarkTime = 0;
 
 PVector mousePos;
 

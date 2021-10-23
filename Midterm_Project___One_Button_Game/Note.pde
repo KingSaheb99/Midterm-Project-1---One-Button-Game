@@ -3,7 +3,7 @@ class Note
  
   PVector position, hitboxTopRight;
   int noteSize = 100;
-  float triggerDistance = noteSize * 50; //Change later
+  float triggerDistance = noteSize * 1.25; //Change later
   
   boolean hitDetection = false;
   boolean alive = true;
@@ -16,9 +16,9 @@ class Note
   float hitboxX = 1.75;
   float hitboxY = 1.15;
   
-  int speed = 11;
+  int speed = 13; //11 was original
   
-  Note(float x, float y, int tempLaneChoice)//, prevPosX, prevPosY) //https://processing.org/tutorials/objects
+  Note(float x, float y, int tempLaneChoice) //https://processing.org/tutorials/objects
   {
    position = new PVector(x, y); 
    laneChoice = tempLaneChoice;
