@@ -149,6 +149,54 @@ boolean spawn123;
 boolean spawn124;
 
 boolean spawn125; //Section 19
+boolean spawn126;
+boolean spawn127;
+boolean spawn128;
+boolean spawn129;
+boolean spawn130;
+boolean spawn131;
+boolean spawn132;
+boolean spawn133;
+boolean spawn134; 
+boolean spawn135; 
+boolean spawn136;
+boolean spawn137;
+boolean spawn138;
+
+boolean spawn139; //Section 20
+boolean spawn140;
+boolean spawn141;
+boolean spawn142;
+boolean spawn143;
+boolean spawn144;
+boolean spawn145;
+boolean spawn146;
+boolean spawn147;
+
+boolean spawn148; //Section 21
+boolean spawn149; 
+boolean spawn150; 
+boolean spawn151;
+boolean spawn152;
+boolean spawn153;
+boolean spawn154;
+boolean spawn155;
+boolean spawn156;
+boolean spawn157;
+boolean spawn158;
+
+boolean spawn159; //Section 22
+boolean spawn160;
+boolean spawn161;
+boolean spawn162; 
+boolean spawn163; 
+boolean spawn164;
+boolean spawn165;
+boolean spawn166;
+
+
+
+
 
 void spawner()
 {
@@ -950,6 +998,228 @@ void spawner()
     spawn124 = false;
     spawn125 = true;
   }
+  
+  //Section 19 Pattern 17
+  
+  else if(millis() > trackPlayMarkTime + 32238 - travelTime && spawn125)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn125 = false;
+    spawn126 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 32451 - travelTime && spawn126)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn126 = false;
+    spawn127 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 32664 - travelTime && spawn127)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn127 = false;
+    spawn128 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 32877 - travelTime && spawn128)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn128 = false;
+    spawn129 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 32984 - travelTime && spawn129)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn129 = false;
+    spawn130 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 33091 - travelTime && spawn130)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn130 = false;
+    spawn131 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 33198 - travelTime && spawn131)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn131 = false;
+    spawn132 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 33411 - travelTime && spawn132)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn132 = false;
+    spawn133 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 33624 - travelTime && spawn133)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn133 = false;
+    spawn134 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 33837 - travelTime && spawn134)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn134 = false;
+    spawn135 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 34050 - travelTime && spawn135)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn135 = false;
+    spawn136 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 34263 - travelTime && spawn136)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn136 = false;
+    spawn137 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 34476 - travelTime && spawn137)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn137 = false;
+    spawn138 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 34689 - travelTime && spawn138)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn138 = false;
+    spawn139 = true;
+  }
+  
+  //Section 20 Pattern 18
+  
+  else if(millis() > trackPlayMarkTime + 35355 - travelTime && spawn139)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn139 = false;
+    spawn140 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 35688 - travelTime && spawn140)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn140 = false;
+    spawn141 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36021 - travelTime && spawn141)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn141 = false;
+    spawn142 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36234 - travelTime && spawn142)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn142 = false;
+    spawn143 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36341 - travelTime && spawn143)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn143 = false;
+    spawn144 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36554 - travelTime && spawn144)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn144 = false;
+    spawn145 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36767 - travelTime && spawn145)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn145 = false;
+    spawn146 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 36979 - travelTime && spawn146)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn146 = false;
+    spawn147 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 37192 - travelTime && spawn147)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn147 = false;
+    spawn148 = true;
+  }
+  
+  //Section 21 Pattern 19
+  
+  else if(millis() > trackPlayMarkTime + 37405 - travelTime && spawn148)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn148 = false;
+    spawn149 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 37618 - travelTime && spawn149)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn149 = false;
+    spawn150 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 37831 - travelTime && spawn150)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn150 = false;
+    spawn151 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 38044 - travelTime && spawn151)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn151 = false;
+    spawn152 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 38257 - travelTime && spawn152)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn152 = false;
+    spawn153 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 38470 - travelTime && spawn153)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn153 = false;
+    spawn154 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 38683 - travelTime && spawn154)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn154 = false;
+    spawn155 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 38896 - travelTime && spawn155)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn155 = false;
+    spawn156 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 39003 - travelTime && spawn156)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn156 = false;
+    spawn157 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 39216 - travelTime && spawn157)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn157 = false;
+    spawn158 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 39429 - travelTime && spawn158)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn158 = false;
+    spawn159 = true;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
