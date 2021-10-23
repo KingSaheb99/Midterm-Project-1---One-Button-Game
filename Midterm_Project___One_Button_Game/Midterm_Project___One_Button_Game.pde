@@ -15,6 +15,7 @@ PVector mousePos;
 float triggerDistance2 = 100;
 
 boolean debug = false;
+int counter = 0;
 
 void setup()
 {
@@ -57,6 +58,9 @@ void mouseClicked()
 {
   pressedMouse = true;
   clickMarkTime = millis();
+  
+  counter = counter + 1;
+  println(counter);
 }
 
 void debugger()
