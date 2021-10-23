@@ -19,14 +19,11 @@ int counter = 0;
 
 void setup()
 {
-  
  size(1920, 1080, P2D);
  
- track1 = new SoundFile(this, "Yoroshiku Oppai Bakunyuu Yankee.wav");
+ track1 = new SoundFile(this, "Yoroshiku Oppai Bakunyuu Yankee Cut.wav");
  track1.play();
- trackPlayMarkTime = millis();
- 
-  
+ trackPlayMarkTime = millis(); 
 }
 
 void draw()
@@ -59,8 +56,11 @@ void mouseClicked()
   pressedMouse = true;
   clickMarkTime = millis();
   
-  counter = counter + 1;
-  println(counter);
+  if(debug)
+  {
+    counter = counter + 1;
+    println(counter);
+  }
 }
 
 void debugger()
