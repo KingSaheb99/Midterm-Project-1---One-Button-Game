@@ -46,38 +46,7 @@ void draw()
     pressedMouse = false;
     clickMarkTime = millis();
   }
-  /*
-  if(millis() > noteSpawnMarkTime + spawnInterval)
-  {
-    notes.add(new Note(width + 100, height/8, int(random(3) + 1)));
-    noteSpawnMarkTime = millis();
-  }
-  
-  for(int i=0; i < notes.size(); i++)
-  {
-    notes.get(i).run();
-    
-    notes.get(0).hitDetection = true; //Only the first note in the array has hit detection turned on, this way hit detection cannot overlap
-    notes.get(int(i > 0)).hitDetection = false;
-  }
-  
-  for(int i=notes.size()-1; i >=0; i--)
-  {
-    Note note = notes.get(i);
-    
-    if(!note.alive)
-    {
-      notes.remove(i); 
-      pressedMouse = false; // if you click and move over mouse over another note without the clickTimeout activating, the note will not despawn
-      clickMarkTime = millis(); //resets above if statement 
-    }
-  }
-  */
-  
-  
-  
-  
-  
+   
   if(debug)
   {
     debugger();

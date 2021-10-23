@@ -1,11 +1,7 @@
-//1772 millis is the time taken for note to reach the center 
-//386 time difference
-//5632
-//213 delta note 1 - 2
 
-int travelTime = 1772;
-int lastNoteTime = 5100;
-int delta1 = 213;
+int travelTime = 1772; //Time required for note to travel to desired location on screen
+int lastNoteTime = 5100; //Value taken from first note instance in song
+int delta1 = 213; //time intervals between notes
 int delta2 = 107;
 int delta3 = 333;
 int delta4 = 666;
@@ -258,7 +254,7 @@ void spawner()
   
   //Section 1 - Patern 1
   
-  if(millis() > trackPlayMarkTime + lastNoteTime - travelTime && spawn1) //The number value is taken from the time in the song when the beat hits. BeatDetector and isBeat() could not be used as the note needs the time to travel to the center of the screen and those options return the exact time when a beat is detected. Thus, they would be too late
+  if(millis() > trackPlayMarkTime + lastNoteTime - travelTime && spawn1) 
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn1 = false;
