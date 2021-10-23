@@ -4,6 +4,11 @@
 //213 delta note 1 - 2
 
 int travelTime = 1772;
+int lastNoteTime;
+int delta1 = 213;
+int delta2 = 107;
+int delta3 = 333;
+int delta4 = 666;
 float trackPlayMarkTime = 0;
 
 boolean spawn1 = true; //Section 1
@@ -193,6 +198,22 @@ boolean spawn163;
 boolean spawn164;
 boolean spawn165;
 boolean spawn166;
+boolean spawn167;
+boolean spawn168;
+
+boolean spawn169;
+boolean spawn170;
+boolean spawn171;
+boolean spawn172; 
+boolean spawn173; 
+boolean spawn174;
+boolean spawn175;
+boolean spawn176;
+boolean spawn177;
+boolean spawn178;
+boolean spawn179;
+
+boolean spawn180;
 
 
 
@@ -1027,7 +1048,7 @@ void spawner()
   }
   else if(millis() > trackPlayMarkTime + 32984 - travelTime && spawn129)
   {
-    notes.add(new Note(width + 100, height/8, 2));
+    notes.add(new Note(width + 100, height/8, 3));
     spawn129 = false;
     spawn130 = true;
   }
@@ -1090,7 +1111,7 @@ void spawner()
   
   else if(millis() > trackPlayMarkTime + 35355 - travelTime && spawn139)
   {
-    notes.add(new Note(width + 100, height/8, 2));
+    notes.add(new Note(width + 100, height/8, 3));
     spawn139 = false;
     spawn140 = true;
   }
@@ -1102,7 +1123,7 @@ void spawner()
   }
   else if(millis() > trackPlayMarkTime + 36021 - travelTime && spawn141)
   {
-    notes.add(new Note(width + 100, height/8, 1));
+    notes.add(new Note(width + 100, height/8, 2));
     spawn141 = false;
     spawn142 = true;
   }
@@ -1112,13 +1133,13 @@ void spawner()
     spawn142 = false;
     spawn143 = true;
   }
-  else if(millis() > trackPlayMarkTime + 36341 - travelTime && spawn143)
+  else if(millis() > trackPlayMarkTime + 36447 - travelTime && spawn143)
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn143 = false;
     spawn144 = true;
   }
-  else if(millis() > trackPlayMarkTime + 36554 - travelTime && spawn144)
+  else if(millis() > trackPlayMarkTime + 36660 - travelTime && spawn144)
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn144 = false;
@@ -1130,13 +1151,13 @@ void spawner()
     spawn145 = false;
     spawn146 = true;
   }
-  else if(millis() > trackPlayMarkTime + 36979 - travelTime && spawn146)
+  else if(millis() > trackPlayMarkTime + 36874 - travelTime && spawn146)
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn146 = false;
     spawn147 = true;
   }
-  else if(millis() > trackPlayMarkTime + 37192 - travelTime && spawn147)
+  else if(millis() > trackPlayMarkTime + 36981 - travelTime && spawn147)
   {
     notes.add(new Note(width + 100, height/8, 1));
     spawn147 = false;
@@ -1145,72 +1166,225 @@ void spawner()
   
   //Section 21 Pattern 19
   
-  else if(millis() > trackPlayMarkTime + 37405 - travelTime && spawn148)
+  else if(millis() > trackPlayMarkTime + 37314 - travelTime && spawn148)
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn148 = false;
     spawn149 = true;
   }
-  else if(millis() > trackPlayMarkTime + 37618 - travelTime && spawn149)
+  else if(millis() > trackPlayMarkTime + 37527 - travelTime && spawn149)
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn149 = false;
     spawn150 = true;
   }
-  else if(millis() > trackPlayMarkTime + 37831 - travelTime && spawn150)
+  else if(millis() > trackPlayMarkTime + 37740 - travelTime && spawn150)
   {
-    notes.add(new Note(width + 100, height/8, 3));
+    notes.add(new Note(width + 100, height/8, 2));
     spawn150 = false;
     spawn151 = true;
   }
-  else if(millis() > trackPlayMarkTime + 38044 - travelTime && spawn151)
+  else if(millis() > trackPlayMarkTime + 38406 - travelTime && spawn151)
   {
-    notes.add(new Note(width + 100, height/8, 2));
+    notes.add(new Note(width + 100, height/8, 3));
     spawn151 = false;
     spawn152 = true;
   }
-  else if(millis() > trackPlayMarkTime + 38257 - travelTime && spawn152)
+  else if(millis() > trackPlayMarkTime + 38739 - travelTime && spawn152)
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn152 = false;
     spawn153 = true;
   }
-  else if(millis() > trackPlayMarkTime + 38470 - travelTime && spawn153)
+  else if(millis() > trackPlayMarkTime + 38952 - travelTime && spawn153)
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn153 = false;
     spawn154 = true;
   }
-  else if(millis() > trackPlayMarkTime + 38683 - travelTime && spawn154)
+  else if(millis() > trackPlayMarkTime + 39165 - travelTime && spawn154)
   {
-    notes.add(new Note(width + 100, height/8, 1));
+    notes.add(new Note(width + 100, height/8, 2));
     spawn154 = false;
     spawn155 = true;
   }
-  else if(millis() > trackPlayMarkTime + 38896 - travelTime && spawn155)
+  else if(millis() > trackPlayMarkTime + 39378 - travelTime && spawn155)
   {
-    notes.add(new Note(width + 100, height/8, 2));
+    notes.add(new Note(width + 100, height/8, 1));
     spawn155 = false;
     spawn156 = true;
   }
-  else if(millis() > trackPlayMarkTime + 39003 - travelTime && spawn156)
+  else if(millis() > trackPlayMarkTime + 39591 - travelTime && spawn156)
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn156 = false;
     spawn157 = true;
   }
-  else if(millis() > trackPlayMarkTime + 39216 - travelTime && spawn157)
+  else if(millis() > trackPlayMarkTime + 39804 - travelTime && spawn157)
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn157 = false;
     spawn158 = true;
   }
-  else if(millis() > trackPlayMarkTime + 39429 - travelTime && spawn158)
+  else if(millis() > trackPlayMarkTime + 40017 - travelTime && spawn158)
   {
-    notes.add(new Note(width + 100, height/8, 1));
+    notes.add(new Note(width + 100, height/8, 2));
     spawn158 = false;
     spawn159 = true;
   }
+  
+  //Section 22 Pattern 6
+  
+  else if(millis() > trackPlayMarkTime + 40350 - travelTime && spawn159)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn159 = false;
+    spawn160 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 40563 - travelTime && spawn160)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn160 = false;
+    spawn161 = true;
+  }
+  
+  //Section 23 Pattern 20
+  
+  else if(millis() > trackPlayMarkTime + 40776 - travelTime && spawn161)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn161 = false;
+    spawn162 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 40989 - travelTime && spawn162)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn162 = false;
+    spawn163 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 41202 - travelTime && spawn163)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn163 = false;
+    spawn164 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 41309 - travelTime && spawn164)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn164 = false;
+    spawn165 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 41416 - travelTime && spawn165)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn165 = false;
+    spawn166 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 41523 - travelTime && spawn166)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn166 = false;
+    spawn167 = true;
+  }
+  
+  //Section 24 Patern 6
+  
+  else if(millis() > trackPlayMarkTime + 41736 - travelTime && spawn167) //Delta 213
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn167 = false;
+    spawn168 = true;
+  }
+  else if(millis() > trackPlayMarkTime + 41949 - travelTime && spawn168) //Delta 213
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn168 = false;
+    spawn169 = true;
+    lastNoteTime = 41949;
+  }
+  
+  //Section 25 Pattern 21
+  
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta2 - travelTime && spawn169)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn169 = false;
+    spawn170 = true;
+    lastNoteTime = lastNoteTime + delta2;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn170)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn170 = false;
+    spawn171 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn171)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn171 = false;
+    spawn172 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta2 - travelTime && spawn172)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn172 = false;
+    spawn173 = true;
+    lastNoteTime = lastNoteTime + delta2;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta2 - travelTime && spawn173)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn173 = false;
+    spawn174 = true;
+    lastNoteTime = lastNoteTime + delta2;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn174)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn174 = false;
+    spawn175 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn175)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn175 = false;
+    spawn176 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn176)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn176 = false;
+    spawn177 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn177)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn177 = false;
+    spawn178 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn178)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn178 = false;
+    spawn179 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn179)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn179 = false;
+    spawn180 = true;
+    lastNoteTime = lastNoteTime + delta3;
+  }
+  
+  
+  
   
   
   
