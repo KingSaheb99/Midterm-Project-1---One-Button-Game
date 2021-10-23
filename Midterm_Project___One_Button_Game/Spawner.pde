@@ -197,7 +197,7 @@ boolean spawn166;
 boolean spawn167;
 boolean spawn168;
 
-boolean spawn169;
+boolean spawn169; //FIND SECTIONS 23, 24, 25
 boolean spawn170;
 boolean spawn171;
 boolean spawn172; 
@@ -406,12 +406,14 @@ boolean spawn352;
 boolean spawn353;
 boolean spawn354;
 boolean spawn355;
-boolean spawn356;
+boolean spawn356; 
 boolean spawn357;
 boolean spawn358; 
-boolean spawn359;
+
+boolean spawn359; //Section 48
 boolean spawn360;
-boolean spawn361;
+
+boolean spawn361; //Section 49
 boolean spawn362;
 boolean spawn363;
 boolean spawn364;
@@ -426,12 +428,51 @@ boolean spawn372;
 boolean spawn373;
 boolean spawn374;
 
-boolean spawn375;
+boolean spawn375; //Section 50
 boolean spawn376;
 boolean spawn377;
 boolean spawn378; 
 boolean spawn379;
 boolean spawn380;
+boolean spawn381;
+boolean spawn382; 
+boolean spawn383;
+boolean spawn384;
+boolean spawn385;
+
+boolean spawn386; //Section 51
+boolean spawn387;
+
+boolean spawn388; //Section 52
+boolean spawn389;
+boolean spawn390; 
+boolean spawn391;
+boolean spawn392;
+
+boolean spawn393; //Section 53
+boolean spawn394;
+boolean spawn395;
+boolean spawn396;
+boolean spawn397;
+boolean spawn398; 
+boolean spawn399;
+boolean spawn400;
+
+boolean spawn401; //Section 54
+boolean spawn402;
+boolean spawn403;
+boolean spawn404;
+boolean spawn405;
+
+boolean spawn406; //Section 55
+boolean spawn407;
+boolean spawn408; 
+boolean spawn409;
+boolean spawn410;
+boolean spawn411;
+boolean spawn412;
+boolean spawn413;
+boolean spawn414;
 
 
 
@@ -634,7 +675,7 @@ void spawner()
   
   //Section 4 - Patern 4
   
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn27)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn27) //27
   {
     notes.add(new Note(width + 100, height/8, 3));
     spawn27 = false;
@@ -1047,7 +1088,7 @@ void spawner()
     spawn83 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn83)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn83) //83
   {
     notes.add(new Note(width + 100, height/8, 1));
     spawn83 = false;
@@ -3206,133 +3247,252 @@ void spawner()
     lastNoteTime = lastNoteTime + delta3;
   }
   
-  //Section 50 Pattern 4
-  /*
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn344)
+  //Section 50 Pattern 8
+  
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn375)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn375 = false;
+    spawn376 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn376)
   {
     notes.add(new Note(width + 100, height/8, 3));
-    spawn344 = false;
-    spawn345 = true;
+    spawn376 = false;
+    spawn377 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn377) 
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn377 = false;
+    spawn378 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn378)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn378 = false;
+    spawn379 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn379) 
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn379 = false;
+    spawn380 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn380)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn380 = false;
+    spawn381 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn381) 
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn381 = false;
+    spawn382 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn382)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn382 = false;
+    spawn383 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn383)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn383 = false;
+    spawn384 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn384) 
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn384 = false;
+    spawn385 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn385)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn385 = false;
+    spawn386 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  
+  //Section 51 - Pattern 6
+  
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn386)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn386 = false;
+    spawn387 = true;
     lastNoteTime = lastNoteTime + delta3;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn345)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn387)
   {
     notes.add(new Note(width + 100, height/8, 1));
-    spawn345 = false;
-    spawn346 = true;
+    spawn387 = false;
+    spawn388 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  } 
+  
+  //Section 52 Pattern 9
+  
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn388)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn388 = false;
+    spawn389 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn346)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn389)
   {
     notes.add(new Note(width + 100, height/8, 2));
-    spawn346 = false;
-    spawn347 = true;
+    spawn389 = false;
+    spawn390 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn347)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn390)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn390 = false;
+    spawn391 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn391)
   {
     notes.add(new Note(width + 100, height/8, 2));
-    spawn347 = false;
-    spawn348 = true;
+    spawn391 = false;
+    spawn392 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn348)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn392)
   {
     notes.add(new Note(width + 100, height/8, 3));
-    spawn348 = false;
-    spawn349 = true;
+    spawn392 = false;
+    spawn393 = true;
     lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn349)
+  } 
+  
+  //Section 53 Pattern 10
+  
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn393)
   {
     notes.add(new Note(width + 100, height/8, 2));
-    spawn349 = false;
-    spawn350 = true;
+    spawn393 = false;
+    spawn394 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn350)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn394)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn394 = false;
+    spawn395 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn395)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn395 = false;
+    spawn396 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn396)
   {
     notes.add(new Note(width + 100, height/8, 1));
-    spawn350 = false;
-    spawn351 = true;
+    spawn396 = false;
+    spawn397 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn397)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn397 = false;
+    spawn398 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn398)
+  {
+    notes.add(new Note(width + 100, height/8, 3));
+    spawn398 = false;
+    spawn399 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn399)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn399 = false;
+    spawn400 = true;
+    lastNoteTime = lastNoteTime + delta1;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn400)
+  {
+    notes.add(new Note(width + 100, height/8, 1));
+    spawn400 = false;
+    spawn401 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
   
-  //Section 51 Pattern 5
+  //Section 54 Pattern 37
   
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn351)
-  {
-    notes.add(new Note(width + 100, height/8, 2));
-    spawn351 = false;
-    spawn352 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn352)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn401)
   {
     notes.add(new Note(width + 100, height/8, 1));
-    spawn352 = false;
-    spawn353 = true;
+    spawn401 = false;
+    spawn402 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn353)
-  {
-    notes.add(new Note(width + 100, height/8, 2));
-    spawn353 = false;
-    spawn354 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn354)
-  {
-    notes.add(new Note(width + 100, height/8, 3));
-    spawn354 = false;
-    spawn355 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn355)
-  {
-    notes.add(new Note(width + 100, height/8, 3));
-    spawn355 = false;
-    spawn356 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn356)
-  {
-    notes.add(new Note(width + 100, height/8, 2));
-    spawn356 = false;
-    spawn357 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn357)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn402)
   {
     notes.add(new Note(width + 100, height/8, 1));
-    spawn357 = false;
-    spawn358 = true;
+    spawn402 = false;
+    spawn403 = true;
     lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn358)
-  {
-    notes.add(new Note(width + 100, height/8, 2));
-    spawn358 = false;
-    spawn359 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }
-  
-  //Section 52 Pattern 6
-  
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta3 - travelTime && spawn359)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn403)
   {
     notes.add(new Note(width + 100, height/8, 3));
-    spawn359 = false;
-    spawn360 = true;
-    lastNoteTime = lastNoteTime + delta3;
+    spawn403 = false;
+    spawn404 = true;
+    lastNoteTime = lastNoteTime + delta1;
   }
-  else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn360)
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta2 - travelTime && spawn404)
+  {
+    notes.add(new Note(width + 100, height/8, 2));
+    spawn404 = false;
+    spawn405 = true;
+    lastNoteTime = lastNoteTime + delta2;
+  }
+  else if(millis() > trackPlayMarkTime + lastNoteTime + delta2 - travelTime && spawn405)
   {
     notes.add(new Note(width + 100, height/8, 1));
-    spawn360 = false;
-    spawn361 = true;
-    lastNoteTime = lastNoteTime + delta1;
-  }*/
+    spawn405 = false;
+    spawn406 = true;
+    lastNoteTime = lastNoteTime + delta2;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
