@@ -3,12 +3,12 @@ class Note
  
   PVector position, hitboxTopRight;
   int noteSize = 100;
-  float triggerDistance = noteSize * 50; //Change later
+  float triggerDistance = noteSize * 1.10; //Change later
   
   boolean hitDetection = false;
   boolean alive = true;
   float spawnMarkTime = 0;
-  int liveTimer = 2500;
+  int liveTimer = 1850;
   
   int colourChoice;
   int laneChoice;
@@ -16,7 +16,7 @@ class Note
   float hitboxX = 1.75;
   float hitboxY = 1.15;
   
-  int speed = 14; //11 was original
+  int speed = 14;
   
   Note(float x, float y, int tempLaneChoice) //https://processing.org/tutorials/objects
   {
@@ -30,6 +30,7 @@ class Note
   
   void update()
   {
+    Note note = notes.get(0);
     position.x -= speed; 
     
     hitboxTopRight = new PVector(position.x, position.y);
@@ -54,6 +55,21 @@ class Note
         if(pressedMouse)
         {
           alive = false;
+          currentCombo = currentCombo + 1;
+          
+          if(note.position.x > width/3)
+          {
+            score = score + 100; //extra 70 points for hitting notes inside brow area
+          }
+          else if(note.position.x > width/4)
+          {
+            score = score + 30; //30 points if you hit note inside of pink area
+          }
+          
+          if(mousePos.dist(note.position) < 10)
+          {
+            score = score + 10; //Another 10 extra points for hitting the center of the circle
+          }
         }
       }
     }
@@ -61,6 +77,9 @@ class Note
     if(millis() > spawnMarkTime + liveTimer)
     {
       alive = false;
+      
+      currentCombo = 0; //resets combo if you miss
+      score = score - 150; //lose 150 points if you miss
     }
   }
   
@@ -73,9 +92,6 @@ class Note
       fill(255, 255, 255);
       rectMode(CENTER);
       rect(position.x, position.y, noteSize * hitboxX, noteSize * hitboxY);
-      
-      ellipse(hitboxTopRight.x, hitboxTopRight.y, 20, 20);
-
     }
     
     stroke(0, 0, 0);
@@ -98,9 +114,17 @@ class Note
     {
        fill(255, 150, 186);
     }
-    
     ellipse(position.x, position.y, noteSize, noteSize);
     
+    
+    if(debug)
+    {
+      strokeWeight(1);
+      stroke(0, 255, 0);
+      fill(255, 255, 255);
+      
+      ellipse(hitboxTopRight.x, hitboxTopRight.y, 20, 20);
+    }
   }
   
   void run()

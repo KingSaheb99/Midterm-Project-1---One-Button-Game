@@ -1,6 +1,6 @@
-class GameMaster //Elements of thise code have been taken from Len Pelletier
-{
- 
+//class GameMaster
+//{
+  
   int gameStartMenu = 1; //Game States
   int gamePaused = 2;
   int gamePlay = 3;
@@ -8,9 +8,18 @@ class GameMaster //Elements of thise code have been taken from Len Pelletier
   int gameLose = 5;
   int gameState = gameStartMenu;
   
-  GameMaster()
+  int currentCombo = 0;
+  int maxCombo = currentCombo;
+  int score = 0;
+  
+  void gameMaster()
   {
-    //
+   if(currentCombo > maxCombo)
+   {
+     maxCombo = currentCombo;
+   }
+   
+   playing();
   }
   
   void update()
@@ -37,11 +46,6 @@ class GameMaster //Elements of thise code have been taken from Len Pelletier
     }
   }
   
-  void draw()
-  {
-    //
-  }
-  
   void introScreen()
   {
     
@@ -54,7 +58,10 @@ class GameMaster //Elements of thise code have been taken from Len Pelletier
   
   void playing()
   {
-    
+    if(currentCombo > maxCombo)
+   {
+     maxCombo = currentCombo;
+   }
   }
   
   void won()
@@ -71,4 +78,4 @@ class GameMaster //Elements of thise code have been taken from Len Pelletier
   {
    update();
   }
-}
+//}
