@@ -20,7 +20,7 @@ boolean debug = false;
 int counter = 0;
 
 PFont arial;
-PImage startScreen, fisherman, sky, bobber, cliff, fishingIcon, scaledFish, bigFish, longFish, fancyFish;
+PImage startScreen, fisherman, bobber, cliff, fishingIcon, scaledFish, bigFish, longFish, fancyFish, mountains;
 
 void setup()
 {
@@ -31,8 +31,8 @@ void setup()
  startScreen = loadImage("IntroScreen.png");
  startScreen.resize(width, height);
  
- sky = loadImage("sky.jpg");
- sky.resize(width, height/7 * 6);
+ mountains = loadImage("Background.png");
+ mountains.resize(width, height);
  
  cliff = loadImage("Cliff.png");
  cliff.resize(width/3, height/4);

@@ -90,7 +90,7 @@ class GameMaster
   {
     //Drawing logic
       
-      image(sky, 0, 0);
+      image(mountains, 0, 0);
       
       if(!spawnedWorm)
       {
