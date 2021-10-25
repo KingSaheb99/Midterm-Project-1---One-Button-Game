@@ -1,4 +1,4 @@
-class GameMaster
+class GameMaster //Elements taken from John McCaffrey
 {
   Bait bait;
   ArrayList<Fish> fishes = new ArrayList<Fish>();
@@ -20,7 +20,7 @@ class GameMaster
   boolean spawnedWorm;
   
   boolean spawnedFish;
-  int numFish = 6; //Change later
+  int numFish = 6;
   
   boolean lost;
   float trackVolume = 1;
@@ -44,7 +44,7 @@ class GameMaster
   
   void update()
   {
-    if(gameState == gameStartMenu)
+    if(gameState == gameStartMenu) //Game states
     {
       introScreen();
     }
@@ -69,7 +69,7 @@ class GameMaster
     
     if(!introTrack.isPlaying())
     {
-      introTrack.play();
+      introTrack.loop();
     }
     
     if(mousePressed)

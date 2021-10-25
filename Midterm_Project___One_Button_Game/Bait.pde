@@ -6,7 +6,6 @@ class Bait
   int triggerDistance2 = 200;
   
   boolean fishing = true;
-  boolean cheat; //remove later
  
   Bait(float x, float y)
   {
@@ -38,9 +37,7 @@ class Bait
           bigFishCorrection = new PVector(firstFish.position.x, firstFish.position.y + bigFish.height/2); //Corrects bait position to be in mouth for bigFish
           
           flingPower = new PVector(0, 0);
-          //fishing = false;
           position = bigFishCorrection;
-          cheat = true; //remove later
         }
       }
       else
@@ -48,9 +45,7 @@ class Bait
         if(firstFish.position.dist(position) < triggerDistance1)
         {
           flingPower = new PVector(0, 0);
-          //fishing = false;
           position = firstFish.position;
-          cheat = true; //remove later
         }
       }
     }

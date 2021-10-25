@@ -25,6 +25,8 @@ PImage startScreen, fisherman, bobber, cliff, fishingIcon, scaledFish, bigFish, 
 void setup()
 {
  size(1920, 1080, P2D);
+ 
+ surface.setTitle("Fish Frenzy");
   
  gameMaster = new GameMaster();
  
