@@ -5,7 +5,9 @@ int delta1 = 213; //time intervals between notes
 int delta2 = 107;
 int delta3 = 333;
 int delta4 = 666;
+
 float trackPlayMarkTime = 0;
+boolean trackPlayed;
 
 boolean spawn1 = true; //Section 1
 boolean spawn2;
@@ -395,9 +397,17 @@ boolean spawn341;
 boolean spawn342; //Section 45
 boolean spawn343;
 
+boolean endSong;
+
 
 void spawner()
 {
+  if(!track1.isPlaying() && !trackPlayed)
+  {
+    track1.play();
+    trackPlayMarkTime = millis();
+    trackPlayed = true;
+  }
   
   //Section 1 - Patern 1
   
@@ -2930,6 +2940,7 @@ void spawner()
   {
     notes.add(new Note(width + 100, height/8, 2));
     spawn343 = false;
+    endSong = true;
     lastNoteTime = lastNoteTime + delta3;
   }
   

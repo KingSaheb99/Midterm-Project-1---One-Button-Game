@@ -1,7 +1,7 @@
 import processing.sound.*;
-SoundFile track1;
+SoundFile track1, introTrack;
 
-//GameMaster gameMaster;
+GameMaster gameMaster;
 
 ArrayList<Note> notes = new ArrayList<Note>();
 float noteSpawnMarkTime = 0;
@@ -14,56 +14,64 @@ float heldMarkTime = 0;
 
 PVector mousePos;
 
-float triggerDistance2 = 100;
+float triggerDistance2 = 100 * 1.10;
 
-boolean debug = false;
+boolean debug = false; 
 int counter = 0;
 
 PFont arial;
+PImage startScreen, fisherman, sky, bobber, cliff, fishingIcon, scaledFish, bigFish, longFish, fancyFish;
 
 void setup()
 {
  size(1920, 1080, P2D);
+  
+ gameMaster = new GameMaster();
  
-// gameMaster = new GameMaster();
+ startScreen = loadImage("IntroScreen.png");
+ startScreen.resize(width, height);
+ 
+ sky = loadImage("sky.jpg");
+ sky.resize(width, height/7 * 6);
+ 
+ cliff = loadImage("Cliff.png");
+ cliff.resize(width/3, height/4);
+ 
+ fisherman = loadImage("Fisherman.png");
+ fisherman.resize(width/8, height/7 * 2);
+ 
+ bobber = loadImage("Bobber.png");
+ bobber.resize(width/22, height/16); //Ratio of x:y of original image size
+ 
+ fishingIcon = loadImage("Fishing Line Icon.png");
+ fishingIcon.resize(width/32, height/32);
+ 
+ scaledFish = loadImage("Fish1.png");
+ scaledFish.resize(scaledFish.width/2, scaledFish.height/2);
+ 
+ bigFish = loadImage("Fish2.png");
+ 
+ 
+ longFish = loadImage("Fish3.png");
+ longFish.resize(longFish.width/2, longFish.height/3);
+ 
+ fancyFish = loadImage("Fish4.png");
+ fancyFish.resize(fancyFish.width/3, fancyFish.height/3);
  
  track1 = new SoundFile(this, "Yoroshiku Oppai Bakunyuu Yankee Cut.wav");
- track1.play();
- trackPlayMarkTime = millis(); 
+ 
+ introTrack = new SoundFile(this, "Azur Lane Login BGM.aiff");
  
  arial = createFont("Arial Bold Italic", 28);
  textFont(arial);
- textAlign(LEFT, LEFT);
 }
 
 void draw()
-{
-  background(225);
-  
-  gameMaster();
-  
-  fill(255, 255, 255);
-  text("COMBO: " + currentCombo, width/128, height/32);
-  text("SCORE: " + score, width/128, height/16);
-  text("MAX COMBO: " + maxCombo, width/128, height/8);
-  
-  rectMode(CORNER);
-  strokeWeight(1);
-  fill(158, 96, 111);
-  rect(width/4, 0, width/4 * 3, height/8 * 4);
-  fill(255, 228, 196);
-  rect(width/3, 0, width/3 * 2, height/8 * 4); //228
-
-  spawner();
-  
+{  
   mousePos = new PVector(mouseX, mouseY);
   
-  if(pressedMouse && millis() > clickMarkTime + clickTimeout) //(1a) Turns off mouse clciked after certain amount of time 
-  {
-    pressedMouse = false;
-    clickMarkTime = millis();
-  }
-   
+  gameMaster.run();
+  
   if(debug)
   {
     debugger();
@@ -74,6 +82,15 @@ void mouseClicked()
 {
   pressedMouse = true;
   clickMarkTime = millis();
+  
+  if(notes.size() > 0)
+  {
+    if(gameMaster.gameState == gameMaster.gamePlay && mousePos.dist(notes.get(0).position) > 110) //110 = note trigger distance
+    {
+      gameMaster.currentCombo = 0; //Combo break on missclick and -15 points
+      gameMaster.score -= 15;
+    }
+  }
   
   if(debug)
   {

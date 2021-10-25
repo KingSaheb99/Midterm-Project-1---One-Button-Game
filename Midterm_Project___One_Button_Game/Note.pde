@@ -55,20 +55,22 @@ class Note
         if(pressedMouse)
         {
           alive = false;
-          currentCombo = currentCombo + 1;
+          gameMaster.currentCombo += 1; 
+          gameMaster.health += 50;
           
           if(note.position.x > width/3)
           {
-            score = score + 100; //extra 70 points for hitting notes inside brow area
+            gameMaster.score += 100; //extra 70 points for hitting notes inside brown area
           }
           else if(note.position.x > width/4)
           {
-            score = score + 30; //30 points if you hit note inside of pink area
+            gameMaster.score += 30; //30 points if you hit note inside of pink area
           }
           
           if(mousePos.dist(note.position) < 10)
           {
-            score = score + 10; //Another 10 extra points for hitting the center of the circle
+            gameMaster.score += 25; //Another 10 extra points for hitting the center of the circle
+            gameMaster.health += 50; //Bonus 50 health for perfect hit
           }
         }
       }
@@ -78,8 +80,9 @@ class Note
     {
       alive = false;
       
-      currentCombo = 0; //resets combo if you miss
-      score = score - 150; //lose 150 points if you miss
+      gameMaster.currentCombo = 0; //resets combo if you miss
+      gameMaster.score -= 150; //lose 150 points if you miss
+      gameMaster.health -= 75; //Lose 25 health on miss
     }
   }
   
