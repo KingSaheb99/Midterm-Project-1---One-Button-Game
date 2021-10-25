@@ -30,7 +30,7 @@ Regarding the scoring system:
 - The game will keep track of your score, combo, and max combo
 - Hitting a note within the boundry of the red rectangle will award 70 points to the score
 - Hitting a note within both the brown rectangle will award an extra 30 points, resulting in a total of 100 points
-- Hitting the note close to the center will award an extra 25 points and increase player health by 25 points
+- Hitting the note close to the center will award an extra 25 points and increase player health by 50 points
 - Every note hit will award 50 health points.
 - If a note passes the red rectangle area, it will despawn and be considered as missed. This will reset the player combo, reduce player score by 150 points, and reduce health by 75 points
 - clicking outside the hit detection range of a note (meaning the player did not click on a note correctly or "misclicked") will break the player's combo and reduce their score by 15 points 
