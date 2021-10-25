@@ -416,6 +416,7 @@ void spawner()
     notes.add(new Note(width + 100, height/8, 3));
     spawn1 = false;
     spawn2 = true;
+    println("SPAM");
   }
   else if(millis() > trackPlayMarkTime + lastNoteTime + delta1 - travelTime && spawn2)
   {

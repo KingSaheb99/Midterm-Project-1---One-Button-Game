@@ -1,6 +1,5 @@
 void reset() //Resets all conditions and variables to initial states
   {
-    println("RESET");
     lastNoteTime = 5100;
     trackPlayMarkTime = 0;
     trackPlayed = false;
@@ -19,8 +18,6 @@ void reset() //Resets all conditions and variables to initial states
     {
       notes.remove(i);
     }
-    
-    spawn1 = true;
     
     for(int i=gameMaster.fishes.size()-1; i >= 0; i--)
     {

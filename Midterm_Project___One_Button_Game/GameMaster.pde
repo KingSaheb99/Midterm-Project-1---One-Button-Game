@@ -76,16 +76,8 @@ class GameMaster
     {
       if(mouseX > width/3 && mouseX < width/3 + width/5 * 1.25 && mouseY > height/4 * 2.6 && mouseY < height/4 * 2.6 + height/4)
       {
-        introTrack.amp(introTrackVolume); //Fades out bgm then turns off
-        introTrackVolume -= introTrackVolumeDelta;
-        introTrackVolume = constrain(introTrackVolume, 0.01, 1);
+        introTrack.stop();
         
-        if(introTrackVolume == 0.01) 
-        {
-          introTrack.stop();
-          introTrackVolumeDelta = 0;
-          introTrack.amp(1);
-        }
         gameState = gamePlay;
       }
     }
@@ -237,39 +229,43 @@ class GameMaster
   
   void lost()
   {
-    //Drawing Logic
+      //Drawing Logic
     
-    textAlign(CENTER, CENTER);
-    textSize(128);
-    fill(0, 0, 0);
-    text("SNAP! IT GOT AWAY", width/2, height/3);
-    
-    fill(137, 207, 240);
-    rect(width/3, height/3 * 2, width/3, height/6);
-    fill(0, 0, 0);
-    textSize(64);
-    text(" R E T R Y ", width/2, height/4 * 3);
-    
-    //Code Logic
-        
-    track1.amp(trackVolume); //Fades out bgm then turns off
-    trackVolume -= trackVolumeDelta;
-    trackVolume = constrain(trackVolume, 0.01, 1);
-    
-    if(trackVolume == 0.01) 
-    {
-      track1.stop();
-      trackVolumeDelta = 0;
-      track1.amp(1);
-    }
-    
-    if(mousePressed)
-    {
-      if(mouseX > width/3 && mouseX < width/3 * 2 && mouseY > height/3 * 2 && mouseY < height * 0.83) //Click inside "Retry" button
+      textAlign(CENTER, CENTER);
+      textSize(128);
+      fill(0, 0, 0);
+      text("SNAP! IT GOT AWAY", width/2, height/3);
+      
+      fill(137, 207, 240);
+      rect(width/3, height/3 * 2, width/3, height/6);
+      fill(0, 0, 0);
+      textSize(64);
+      text(" R E T R Y ", width/2, height/4 * 3);
+      
+      //Code Logic
+      
+      if(trackVolumeDelta == 0)
       {
-        reset();
+        if(mousePressed)
+        {
+          if(mouseX > width/3 && mouseX < width/3 * 2 && mouseY > height/3 * 2 && mouseY < height * 0.83) //Click inside "Retry" button
+          {
+            reset();
+            lost = false;
+          }
+        }
       }
-    }
+          
+      track1.amp(trackVolume); //Fades out bgm then turns off
+      trackVolume -= trackVolumeDelta;
+      trackVolume = constrain(trackVolume, 0.01, 1);
+      
+      if(trackVolume == 0.01) 
+      {
+        track1.stop();
+        trackVolumeDelta = 0;
+        track1.amp(1);
+      }
   }
   
   void run()
