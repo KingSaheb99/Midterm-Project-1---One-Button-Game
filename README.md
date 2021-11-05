@@ -1,4 +1,4 @@
-# Midterm-Project-1---One-Button-Game
+# Fish Frenzy
 
 My program features the combining of two, seemingly seperate, game genres: rhythm and fishing games.
 
